@@ -16,3 +16,12 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/test', function () {
+    return 'User ';
+});
+
+$router->get('/api/v1/transactions', [
+    'as' => 'transactions', 
+    'uses' => 'TronsController@transactions'
+]);
